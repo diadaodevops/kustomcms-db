@@ -18,8 +18,8 @@
     "dev": "next dev",
     "build": "yarn build",
     "build:analyze": "yarn build && source-map-explorer .next/static/**/*.js",
-    "start": "yarn start",
-    "docker": "docker-compose up -d --build app",
+    "start": "yarn run start -p 8080",
+    "docker": "docker-compose up -d --build app"
   },
   "standard": {
     "env": [
