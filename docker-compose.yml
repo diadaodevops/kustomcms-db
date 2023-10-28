@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  db:
+    image: mongo
+    ports:
+      - 8080:8080
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=mgav5mgav5
+      - MONGO_INITDB_DATABASE=mgav_5
+    restart: always
+    volumes:
+      - ./data/mongo/001_users.js:/docker-entrypoint-initdb.d/001_users.js:ro
+      - ~/data:/data/db
+    restart: always
+
+networks:
+    app-network:
+        driver: bridge
