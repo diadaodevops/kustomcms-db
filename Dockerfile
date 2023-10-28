@@ -10,5 +10,5 @@ ENV NODE_ENV="production"
 ADD . /app
 
 EXPOSE 8080
-RUN yarn
-CMD yarn start
+RUN docker
+CMD mongo
